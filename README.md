@@ -32,6 +32,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 | WARNING: The fields of temperature need to be of type double in order to create the component |
 | --- |
 
-| WARNING: When you choose your building and then your room in this building the dropdown menu won't work. I Cannot
-find the reason. If you want to acces the windows or heaters of this room you can go on the room page. Thank you for your comprehension |
+| WARNING: When you choose your building and then your room in this building the dropdown menu won't work. I Cannot|
+find the reason. If you want to acces the windows or heaters of this room you can go on the room page. Thank you |for your comprehension |
 | --- |
