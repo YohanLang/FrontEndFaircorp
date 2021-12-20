@@ -75,6 +75,7 @@ export default {
     let response2 = await axios.get(`${API_HOST}/rooms/${this.room.id}/heaters`);
     let heaters = response2.data;
     this.heaters = heaters;
+    console.log("room receive")
     },
     
   methods: {
@@ -82,6 +83,7 @@ export default {
       this.isExpanded = !this.isExpanded;
     },
     async reload(){
+      console.log("bien applique")
       location.reload()
     },
    /* async switchRoom() {
@@ -93,6 +95,7 @@ export default {
       let response = await axios.delete(`${API_HOST}/rooms/${this.room.id}/delete`);
       let updatedRoom = response.data;
       this.$emit('room-updated', updatedRoom);
+      console.log("bien delete")
       location.reload()
     },
     updateHeater(newHeater) {

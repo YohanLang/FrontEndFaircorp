@@ -70,7 +70,7 @@ export default {
     let response = await axios.get(`${API_HOST}/heaters`);
     let heaters = response.data;
     this.heaters = heaters;
-  
+    console.log("heater reveive")
     let response2 = await axios.get(`${API_HOST}/rooms`);
     let roomsId = response2.data;
     this.roomsId = roomsId;
@@ -80,6 +80,7 @@ export default {
        text:  room.name,
     }
     this.locales.push(selectListOption)
+
 });
   },
   methods: {
@@ -91,6 +92,7 @@ export default {
       this.heaterId = response.data.id;
       let updatedHeater = response.data;
       this.$emit('heater-updated', updatedHeater);
+      console.log("Heater cree")
       location.reload();
     },
     changeheatstatus(){

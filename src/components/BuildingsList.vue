@@ -64,6 +64,7 @@ export default {
     let response = await axios.get(`${API_HOST}/buildings`);
     let buildings = response.data;
     this.buildings = buildings;
+    console.log("building receive")
   },
   methods: {
     updateBuilding(newBuilding) {
@@ -78,8 +79,10 @@ export default {
       this.buildingId = response.data.id;
       let updatedBuilding = response.data;
       this.$emit('building-updated', updatedBuilding);
+      console.log("bien cree")
       location.reload();
     },
+    
   }
 }
 </script>

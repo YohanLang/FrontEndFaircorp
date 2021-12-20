@@ -41,12 +41,14 @@ export default {
     async switchHeater() {
       let response = await axios.put(`${API_HOST}/heaters/${this.heater.id}/switch`);
       let updatedHeater = response.data;
+      console.log("bien switch")
       this.$emit('heater-updated', updatedHeater);
     },
     async deleteHeater() {
       let response = await axios.delete(`${API_HOST}/heaters/${this.heater.id}/delete`);
       let updatedHeater = response.data;
       this.$emit('heater-updated', updatedHeater);
+      console.log("bien delete")
       location.reload()
     },
     

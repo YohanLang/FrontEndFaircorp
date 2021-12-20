@@ -73,6 +73,7 @@ export default {
        text:  room.name,
     }
     this.locales.push(selectListOption)
+    console.log("window receive")
 });
   },
   methods: {
@@ -84,6 +85,7 @@ export default {
       this.windowId = response.data.id;
       let updatedWindow = response.data;
       this.$emit('window-updated', updatedWindow);
+      console.log("bien cree")
       location.reload();
     },
     changewindstatus(){

@@ -41,11 +41,13 @@ export default {
       let response = await axios.put(`${API_HOST}/windows/${this.window.id}/switch`);
       let updatedWindow = response.data;
       this.$emit('window-updated', updatedWindow);
+      console.log("bien print")
     },
     async deleteWindow() {
       let response = await axios.delete(`${API_HOST}/windows/${this.window.id}/delete`);
       let updatedWindow = response.data;
       this.$emit('window-updated', updatedWindow);
+      console.log("bien delete")
       location.reload()
     },
     

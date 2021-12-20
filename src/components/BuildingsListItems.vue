@@ -74,6 +74,7 @@ export default {
       let response = await axios.delete(`${API_HOST}/buildings/${this.building.id}/delete`);
       let updatedBuilding = response.data;
       this.$emit('building-updated', updatedBuilding);
+      console.log("bien delete")
       location.reload()
     },
     updateWindow(newWindow) {

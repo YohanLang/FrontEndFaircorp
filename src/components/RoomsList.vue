@@ -77,6 +77,7 @@ export default {
        text:  building.name,
     }
     this.locales.push(selectListOption)
+    console.log("room receive")
 })
   },
   methods: {
@@ -92,6 +93,7 @@ export default {
       this.roomId = response.data.id;
       let updatedRoom = response.data;
       this.$emit('room-updated', updatedRoom);
+      console.log("bien cree")
       location.reload();
     },
   }
